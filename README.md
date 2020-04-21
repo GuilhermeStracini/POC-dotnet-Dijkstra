@@ -14,9 +14,9 @@ This POC validates the usage of [Dijkstra's algorithm](https://en.wikipedia.org/
 
 ## Proofs
 
-### Sample 1 - Edges are bi-directional 
+### Sample 1 - SimpleNode - Edges are bi-directional 
 
-In this sample, the direction of the edge is bi-directional. It means that connecting the A to B node, is the same than B to A.
+In this sample, the direction of the edge is bi-directional. It means that connecting A to B node, is the same than B to A.
 
 ![Sample #1](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample1.jpg)
 ![Sample #1 Detailed](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample1Detailed.jpg)
@@ -45,7 +45,7 @@ var result = dijkstra.FindShortestPath(a, f);
 
 ```
 
-### Sample 2 - Edges are directional 
+### Sample 2 - DirectionalNode - Edges are directional 
 
 In this sample, the connection works only in one way. If connected A to B, only A to B flow is allowed, B from A not.
 We can use diferent value for the connection for each direction. A to B 5 then B to A 10
@@ -102,7 +102,7 @@ var result = dijkstra.FindShortestPath(nine, six);
 
 ```
 
-### Sample 3
+### Sample 3 - DirectionalNode - More complex example
 
 ![Sample #3](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample3.jpg)
 ![Sample #3 detailed](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample3Detailed.jpg)
