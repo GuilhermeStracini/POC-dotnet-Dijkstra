@@ -15,6 +15,7 @@ dotnet_csproj:
   informational_version: '{version}' 
 
 before_build:
+- ps: $env:SOLUTION_NAME = "$env:APPVEYOR_REPO_NAME" -replace ".*/","" -replace "-SDK-dotnet","" -replace "-dotnet",""
 - cmd: nuget restore
 
 build:
