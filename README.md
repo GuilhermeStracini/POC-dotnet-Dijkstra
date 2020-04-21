@@ -19,6 +19,7 @@ This POC validates the usage of [Dijkstra's algorithm](https://en.wikipedia.org/
 In this sample, the direction of the edge is bi-directional. It means that connecting the A to B node, is the same than B to A.
 
 ![Sample #1](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sampleOne.jpg)
+![Sample #1 Detailed](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sampleOneDetailed.jpg)
 
 ```cs
 
@@ -49,7 +50,8 @@ var result = dijkstra.FindShortestPath(a, f);
 In this sample, the connection works only in one way. If connected A to B, only A to B flow is allowed, B from A not.
 We can use diferent value for the connection for each direction. A to B 5 then B to A 10
 
-![Sample #1](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sampleTwo.jpg)
+![Sample #2](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sampleTwo.jpg)
+![Sample #2 Detailed](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sampleTwoDetailed.jpg)
 
 * Both directions made in 2<->3 nodes
 
