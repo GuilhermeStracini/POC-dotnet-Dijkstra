@@ -2,7 +2,7 @@
 
 A proof of concept of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) [![Build status](https://ci.appveyor.com/api/projects/status/2bmiw5bsdrwqg134?svg=true)](https://ci.appveyor.com/project/guibranco/poc-dijkstra)
 
-Based on [https://www.elemarjr.com/pt/archive/encontrando-o-melhor-caminho-entre-dois-pontos-usando-dijkstra/](https://www.elemarjr.com/pt/archive/encontrando-o-melhor-caminho-entre-dois-pontos-usando-dijkstra/)
+Based on Elemar Jr's post [Finding the best path between two points using Dijkstra (in portuguese)](https://www.elemarjr.com/pt/archive/encontrando-o-melhor-caminho-entre-dois-pontos-usando-dijkstra/)
 
 ---
 
