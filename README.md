@@ -84,6 +84,8 @@ four.ConnectTo(five, 10);
 
 five.ConnectTo(six, 5);
 
+//six doesn't has outbound connections, only inbound
+
 seven.ConnectTo(six, 10);
 
 height.ConnectTo(one, 5);
@@ -102,7 +104,7 @@ var result = dijkstra.FindShortestPath(nine, six);
 
 ```
 
-### Sample 3 - DirectionalNode - More complex example
+### Sample 3 - SimpleNode - More complex example
 
 ![Sample #3](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample3.jpg)
 ![Sample #3 detailed](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample3Detailed.jpg)
