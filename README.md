@@ -1,16 +1,14 @@
 # POC Dijkstra
 
-A proof of concept of Dijkstra algorithm [![Build status](https://ci.appveyor.com/api/projects/status/2bmiw5bsdrwqg134?svg=true)](https://ci.appveyor.com/project/guibranco/poc-dijkstra)
+A proof of concept of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) [![Build status](https://ci.appveyor.com/api/projects/status/2bmiw5bsdrwqg134?svg=true)](https://ci.appveyor.com/project/guibranco/poc-dijkstra)
 
 Based on [https://www.elemarjr.com/pt/archive/encontrando-o-melhor-caminho-entre-dois-pontos-usando-dijkstra/](https://www.elemarjr.com/pt/archive/encontrando-o-melhor-caminho-entre-dois-pontos-usando-dijkstra/)
-
-[![Edsger Dijkstra](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/logo.jpg)](https://pt.wikipedia.org/wiki/Edsger_Dijkstra)
 
 ---
 
 ## About
 
-This POC validates the usage of Dijkstra algorithm to find the fastest way between two points.
+This POC validates the usage of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) to find the fastest way between two points.
 
 ---
 
@@ -93,4 +91,9 @@ ten.ConnectTo(three, 15);
 var dijkstra = new Dijkstra.Dijkstra();
 var result = dijkstra.FindShortestPath(nine, six);
 
-``
+```
+
+### Sample 3
+
+![Sample #3](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sampleThree.jpg)
+![Sample #3 detailed](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sampleThreeDetailed.jpg)
