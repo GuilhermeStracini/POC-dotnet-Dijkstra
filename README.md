@@ -3,7 +3,7 @@
 A proof of concept of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) 
 
 [![Build status](https://ci.appveyor.com/api/projects/status/2bmiw5bsdrwqg134?svg=true)](https://ci.appveyor.com/project/guibranco/poc-dijkstra)
-[![time tracker](https://wakatime.com/badge/github/guibranco/POC-Dijkstra.svg)](https://wakatime.com/badge/github/guibranco/POC-Dijkstra)
+[![time tracker](https://wakatime.com/badge/github/GuilhermeStracini/POC-Dijkstra.svg)](https://wakatime.com/badge/github/GuilhermeStracini/POC-Dijkstra)
 
 Based on Elemar Jr's post [Finding the best path between two points using Dijkstra (in portuguese)](https://www.elemarjr.com/pt/archive/encontrando-o-melhor-caminho-entre-dois-pontos-usando-dijkstra/)
 
