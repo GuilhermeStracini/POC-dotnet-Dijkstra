@@ -1,6 +1,6 @@
-# POC Dijkstra
+# POC .NET Dijkstra
 
-A proof of concept of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) 
+A proof of concept of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) in .NET
 
 [![Build status](https://ci.appveyor.com/api/projects/status/2bmiw5bsdrwqg134?svg=true)](https://ci.appveyor.com/project/guibranco/poc-dijkstra)
 [![time tracker](https://wakatime.com/badge/github/GuilhermeStracini/POC-Dijkstra.svg)](https://wakatime.com/badge/github/GuilhermeStracini/POC-Dijkstra)
