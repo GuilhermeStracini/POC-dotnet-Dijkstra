@@ -4,6 +4,8 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/2bmiw5bsdrwqg134?svg=true)](https://ci.appveyor.com/project/guibranco/poc-dijkstra)
 [![time tracker](https://wakatime.com/badge/github/GuilhermeStracini/POC-Dijkstra.svg)](https://wakatime.com/badge/github/GuilhermeStracini/POC-Dijkstra)
+[![Maintainability](https://api.codeclimate.com/v1/badges/121524e664273fc8c30f/maintainability)](https://codeclimate.com/github/GuilhermeStracini/POC-dotnet-Dijkstra/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/121524e664273fc8c30f/test_coverage)](https://codeclimate.com/github/GuilhermeStracini/POC-dotnet-Dijkstra/test_coverage)
 
 Based on Elemar Jr's post [Finding the best path between two points using Dijkstra (in portuguese)](https://www.elemarjr.com/pt/archive/encontrando-o-melhor-caminho-entre-dois-pontos-usando-dijkstra/)
 
