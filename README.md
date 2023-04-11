@@ -7,6 +7,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/121524e664273fc8c30f/maintainability)](https://codeclimate.com/github/GuilhermeStracini/POC-dotnet-Dijkstra/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/121524e664273fc8c30f/test_coverage)](https://codeclimate.com/github/GuilhermeStracini/POC-dotnet-Dijkstra/test_coverage)
 [![CodeFactor](https://www.codefactor.io/repository/github/GuilhermeStracini/POC-dotnet-Dijkstra/badge)](https://www.codefactor.io/repository/github/GuilhermeStracini/POC-dotnet-Dijkstra)
+[![GitHub license](https://img.shields.io/github/license/GuilhermeStracini/POC-dotnet-Dijkstra)](https://github.com/GuilhermeStracini/POC-dotnet-Dijkstra)
+[![GitHub last commit](https://img.shields.io/github/last-commit/GuilhermeStracini/POC-dotnet-Dijkstra)](https://github.com/GuilhermeStracini/POC-dotnet-Dijkstra)
 
 Based on Elemar Jr's post [Finding the best path between two points using Dijkstra (in portuguese)](https://www.elemarjr.com/pt/archive/encontrando-o-melhor-caminho-entre-dois-pontos-usando-dijkstra/)
 
