@@ -2,7 +2,7 @@
 
 :microscope: Proof of Concept of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) in .NET
 
-[![Build status](https://ci.appveyor.com/api/projects/status/2bmiw5bsdrwqg134?svg=true)](https://ci.appveyor.com/project/guibranco/poc-dijkstra)
+[![Build status](https://ci.appveyor.com/api/projects/status/9174jpwpl3d2eg3r/branch/main?svg=true)](https://ci.appveyor.com/project/guibranco/poc-dijkstra)
 [![wakatime](https://wakatime.com/badge/github/GuilhermeStracini/POC-dotnet-Dijkstra.svg)](https://wakatime.com/badge/github/GuilhermeStracini/POC-dotnet-Dijkstra)
 [![Maintainability](https://api.codeclimate.com/v1/badges/121524e664273fc8c30f/maintainability)](https://codeclimate.com/github/GuilhermeStracini/POC-dotnet-Dijkstra/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/121524e664273fc8c30f/test_coverage)](https://codeclimate.com/github/GuilhermeStracini/POC-dotnet-Dijkstra/test_coverage)
@@ -24,7 +24,7 @@ This POC validates the usage of [Dijkstra's algorithm](https://en.wikipedia.org/
 
 ### Sample 1 - SimpleNode - Edges are bi-directional 
 
-In this sample, the direction of the edge is bi-directional. It means that connecting A to B node, is the same than B to A.
+In this sample, the direction of the edge is bi-directional. It means that connecting A to B node is the same as B to A.
 
 ![Sample #1](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample1.jpg)
 ![Sample #1 Detailed](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample1Detailed.jpg)
@@ -56,7 +56,7 @@ var result = dijkstra.FindShortestPath(a, f);
 ### Sample 2 - DirectionalNode - Edges are directional 
 
 In this sample, the connection works only in one way. If connected A to B, only A to B flow is allowed, B from A not.
-We can use diferent value for the connection for each direction. A to B 5 then B to A 10
+We can use different values for the connection for each direction. A to B 5 then B to A 10
 
 ![Sample #2](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample2.jpg)
 ![Sample #2 Detailed](https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/Samples/sample2Detailed.jpg)
@@ -92,7 +92,7 @@ four.ConnectTo(five, 10);
 
 five.ConnectTo(six, 5);
 
-//six doesn't has outbound connections, only inbound
+//six doesn't have outbound connections, only inbound
 
 seven.ConnectTo(six, 10);
 
