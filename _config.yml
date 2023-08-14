@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
 title: POC Dijkstra
 description: A proof of concept of Dijkstra algorithm
-logo: https://raw.githubusercontent.com/guibranco/POC-Dijkstra/master/logo.jpg
+logo: https://raw.githubusercontent.com/guibranco/POC-Dijkstra/main/logo.jpg
 show_downloads: true
