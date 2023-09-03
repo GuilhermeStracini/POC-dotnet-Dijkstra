@@ -1,5 +1,3 @@
 theme: jekyll-theme-minimal
-title: POC Dijkstra
-description: A proof of concept of the Dijkstra algorithm
 logo: https://raw.githubusercontent.com/GuilhermeStracini/POC-dotnet-Dijkstra/main/logo.jpg
 show_downloads: true
