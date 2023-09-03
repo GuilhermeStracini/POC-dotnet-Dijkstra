@@ -1,4 +1,4 @@
-# POC .NET Dijkstra
+# PoC .NET Dijkstra
 
 :microscope: Proof of Concept of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) in .NET
 
@@ -16,7 +16,7 @@ Based on Elemar Jr's post [Finding the best path between two points using Dijkst
 
 ## About
 
-This POC validates the usage of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) to find the fastest way between two points.
+This PoC validates the usage of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) to find the fastest way between two points.
 
 ---
 
