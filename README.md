@@ -1,4 +1,4 @@
-# PoC .NET Dijkstra
+# PoC .NET - Dijkstra
 
 🔬 Proof of Concept of [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) in .NET
 
