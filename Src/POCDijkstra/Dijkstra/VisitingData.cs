@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Assembly         : POCDijkstra
 // Author           : Guilherme Branco Stracini
 // Created          : 20/04/2020
@@ -142,6 +142,5 @@ namespace POCDijkstra.Dijkstra
                 n = QueryWeight(n).From;
             }
         }
-
     }
 }
