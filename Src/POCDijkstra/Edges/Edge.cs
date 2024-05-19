@@ -1,4 +1,4 @@
-﻿// ***********************************************************************
+// ***********************************************************************
 // Assembly         : POCDijkstra
 // Author           : Guilherme Branco Stracini
 // Created          : 21/04/2020
@@ -69,6 +69,5 @@ namespace POCDijkstra.Edges
         {
             return new Edge(value, node1, node2);
         }
-
     }
 }
