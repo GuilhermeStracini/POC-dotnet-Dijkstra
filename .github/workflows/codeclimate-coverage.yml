@@ -1,0 +1,41 @@
+name: CodeClimate Coverage
+
+on: [push, pull_request]
+
+jobs:
+  test-and-report:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Install CodeClimate reporter
+      run: |
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        chmod +x ./cc-test-reporter
+        ./cc-test-reporter before-build
+
+    - name: Run tests and generate coverage report
+      run: dotnet test --collect:"XPlat Code Coverage"
+
+    - name: Format and upload coverage report to CodeClimate
+      run: |
+        ./cc-test-reporter format-coverage --input-type cobertura --output coverage.json
+        ./cc-test-reporter upload-coverage --id ${{ secrets.CC_TEST_REPORTER_ID }} --input coverage.json --partial
+      env:
+        GIT_BRANCH: ${{ github.ref }}
+        GIT_COMMIT_SHA: ${{ github.sha }}
+        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        CC_PREFIX: "$(pwd)"
+
+    - name: Upload coverage report to CodeClimate
+      run: ./cc-test-reporter after-build --exit-code $?
