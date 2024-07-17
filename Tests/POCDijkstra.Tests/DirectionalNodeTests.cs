@@ -11,8 +11,8 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using POCDijkstra.Nodes;
 using System;
+using POCDijkstra.Nodes;
 using Xunit;
 
 namespace POCDijkstra.Tests

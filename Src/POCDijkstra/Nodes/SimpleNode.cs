@@ -12,9 +12,9 @@
 // <summary></summary>
 // ***********************************************************************
 
-using POCDijkstra.Edges;
 using System.Collections.Generic;
 using System.Linq;
+using POCDijkstra.Edges;
 
 namespace POCDijkstra.Nodes
 {
@@ -57,10 +57,7 @@ namespace POCDijkstra.Nodes
         /// <value>The neighbors.</value>
         public IEnumerable<NeighborhoodInfo> Neighbors =>
             from edge in Edges
-            select new NeighborhoodInfo(
-                edge.Node1 == this ? edge.Node2 : edge.Node1,
-                edge.Value
-            );
+            select new NeighborhoodInfo(edge.Node1 == this ? edge.Node2 : edge.Node1, edge.Value);
 
         /// <summary>
         /// Assigns the specified edge.
