@@ -11,8 +11,8 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using POCDijkstra.Nodes;
 using System.Linq;
+using POCDijkstra.Nodes;
 
 namespace POCDijkstra.Dijkstra
 {
@@ -53,7 +53,10 @@ namespace POCDijkstra.Dijkstra
 
                     var probableWeight = (visitingNodeWeight.Value + neighborhoodInfo.WeightToNode);
                     if (neighborWeight.Value > probableWeight)
-                        control.UpdateWeight(neighborhoodInfo.Node, new Weight(visitingNode, probableWeight));
+                        control.UpdateWeight(
+                            neighborhoodInfo.Node,
+                            new Weight(visitingNode, probableWeight)
+                        );
                 }
             }
 

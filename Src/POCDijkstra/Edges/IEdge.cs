@@ -26,11 +26,13 @@ namespace POCDijkstra.Edges
         /// </summary>
         /// <value>The node1.</value>
         INode Node1 { get; }
+
         /// <summary>
         /// Gets the node2.
         /// </summary>
         /// <value>The node2.</value>
         INode Node2 { get; }
+
         /// <summary>
         /// Gets the value.
         /// </summary>
