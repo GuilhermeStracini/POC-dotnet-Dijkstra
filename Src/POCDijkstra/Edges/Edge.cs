@@ -12,8 +12,8 @@
 // <summary></summary>
 // ***********************************************************************
 
-using POCDijkstra.Nodes;
 using System;
+using POCDijkstra.Nodes;
 
 namespace POCDijkstra.Edges
 {
@@ -29,11 +29,13 @@ namespace POCDijkstra.Edges
         /// </summary>
         /// <value>The value.</value>
         public int Value { get; }
+
         /// <summary>
         /// Gets the node1.
         /// </summary>
         /// <value>The node1.</value>
         public INode Node1 { get; }
+
         /// <summary>
         /// Gets the node2.
         /// </summary>
