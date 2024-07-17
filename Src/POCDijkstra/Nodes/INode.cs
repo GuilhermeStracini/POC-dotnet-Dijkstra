@@ -12,8 +12,8 @@
 // <summary></summary>
 // ***********************************************************************
 
-using POCDijkstra.Edges;
 using System.Collections.Generic;
+using POCDijkstra.Edges;
 
 namespace POCDijkstra.Nodes
 {

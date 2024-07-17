@@ -26,6 +26,7 @@ namespace POCDijkstra.Dijkstra
         /// </summary>
         /// <value>From.</value>
         public INode From { get; }
+
         /// <summary>
         /// Gets the value.
         /// </summary>
