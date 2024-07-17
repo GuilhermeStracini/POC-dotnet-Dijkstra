@@ -29,8 +29,7 @@ namespace POCDijkstra.Nodes
         /// </summary>
         /// <param name="label">The label.</param>
         public DirectionalNode(string label)
-        : base(label)
-        { }
+            : base(label) { }
 
         /// <summary>
         /// Gets the neighbors.

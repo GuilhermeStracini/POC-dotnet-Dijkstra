@@ -12,9 +12,9 @@
 // <summary></summary>
 // ***********************************************************************
 
-using POCDijkstra.Nodes;
 using System.Collections.Generic;
 using System.Linq;
+using POCDijkstra.Nodes;
 
 namespace POCDijkstra.Dijkstra
 {

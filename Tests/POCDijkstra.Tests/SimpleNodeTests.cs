@@ -11,9 +11,9 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using POCDijkstra.Nodes;
 using System;
 using System.Linq;
+using POCDijkstra.Nodes;
 using Xunit;
 
 namespace POCDijkstra.Tests
@@ -64,9 +64,9 @@ namespace POCDijkstra.Tests
             {
                 var currentWeight = 0;
                 if (i < result.Length - 1)
-                    currentWeight = result[i].Neighbors
-                                             .Single(n => n.Node.Label.Equals(result[i + 1].Label))
-                                             .WeightToNode;
+                    currentWeight = result[i]
+                        .Neighbors.Single(n => n.Node.Label.Equals(result[i + 1].Label))
+                        .WeightToNode;
                 weight += currentWeight;
             }
 
