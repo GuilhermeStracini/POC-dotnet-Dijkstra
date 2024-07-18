@@ -1,4 +1,4 @@
-name: Sonar Cloud Analysis
+name: Sonar Cloud
 
 on:
   push:
@@ -6,30 +6,29 @@ on:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
-    
+  
 jobs:
-  sonarcloud:
-    runs-on: ubuntu-latest
+  SonarCloudAnalysis:
+    name: Sonar Cloud Analysis
+    runs-on: windows-latest
     steps:
-      
-      - name: Set up JDK 11
+      - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          java-version: 21
           distribution: 'temurin'
-          
-      - name: Checkout code
-        uses: actions/checkout@v4
+          java-version: 21
+      
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      
       - name: Cache SonarCloud packages
         uses: actions/cache@v4
         with:
           path: ~\sonar\cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
-          
+      
       - name: Cache SonarCloud scanner
         id: cache-sonar-scanner
         uses: actions/cache@v4
@@ -37,29 +36,21 @@ jobs:
           path: .\.sonar\scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
-          
+      
       - name: Install SonarCloud scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: powershell
         run: |
           New-Item -Path .\.sonar\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
-          
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
-          
-      - name: Install dependencies
-        run: dotnet restore
-        
+      
       - name: Build and analyze
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"${{ github.repository_owner }}_${{ github.event.repository.name }}" /o:"${{ vars.SONAR_ORG }}" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build
-          dotnet test --collect:"XPlat Code Coverage"
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"${{ github.repository_owner }}_${{ github.event.repository.name }}" /o:"${{ github.repository_owner }}" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet build -c Release --verbosity minimal
+          dotnet test -c Release --verbosity minimal --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat="cobertura"
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
