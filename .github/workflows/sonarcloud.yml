@@ -16,7 +16,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin' # Use whatever distribution you want. I prefer Temurin or Zulu, feel free to use any other (check SonarCloud for supported distributions and versions).
+          distribution: 'temurin' # Use whatever distribution you want. I prefer Temurin or Zulu. Feel free to use any other (check SonarCloud for supported distributions and versions).
           java-version: 21
       
       - uses: actions/checkout@v4
