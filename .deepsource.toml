@@ -1,0 +1,11 @@
+version = 1
+
+[[analyzers]]
+name = "test-coverage"
+enabled = true
+
+[[analyzers]]
+name = "secrets"
+
+[[analyzers]]
+name = "csharp"
