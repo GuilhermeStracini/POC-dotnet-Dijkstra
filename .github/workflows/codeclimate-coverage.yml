@@ -32,7 +32,7 @@ jobs:
     - name: Format and upload coverage report to CodeClimate
       run: |
         ./cc-test-reporter format-coverage --input-type cobertura --output coverage.json Tests/POCDijkstra.Tests/coverage.cobertura.xml
-        ./cc-test-reporter upload-coverage --id ${{ secrets.CC_TEST_REPORTER_ID }} --input coverage.json --partial
+        ./cc-test-reporter upload-coverage -i code-climate.json
       env:
         GIT_BRANCH: ${{ github.ref }}
         GIT_COMMIT_SHA: ${{ github.sha }}
