@@ -8,10 +8,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
 
@@ -32,12 +32,4 @@ jobs:
     - name: Format and upload coverage report to CodeClimate
       run: |
         ./cc-test-reporter format-coverage --input-type cobertura --output code-climate.json Tests/POCDijkstra.Tests/coverage.cobertura.xml
-        ./cc-test-reporter upload-coverage -i code-climate.json
-      env:
-        GIT_BRANCH: ${{ github.ref }}
-        GIT_COMMIT_SHA: ${{ github.sha }}
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        CC_PREFIX: "$(pwd)"
-
-    - name: Upload coverage report to CodeClimate
-      run: ./cc-test-reporter after-build --exit-code $?
+        ./cc-test-reporter upload-coverage -i code-climate.json -r ${{ secrets.CC_TEST_REPORTER_ID }}
