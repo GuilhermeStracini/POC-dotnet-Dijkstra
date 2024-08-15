@@ -5,7 +5,7 @@ configuration: Release
 
 environment:
   SONAR_TOKEN:
-    secure: d4IrvRdHqUGj49hTxXumqFZsiQ8nk+/X7482GWnQqfqnQqFCUCukIPQsILzOlIFy
+    secure: 1p1JxwJ2ZeEVfXNWsKtV8wOWsHCJopjNMWzQa4wiofHTd9bVpdcEdJnPlUk1bS5X
   CODACY_PROJECT_TOKEN:
     secure: d9gOPuPA6l935Y61F82QoARJir9TvbJXXXV8oftNo7N3XEqHchsk1m8CJlGiE12D
   CODECLIMATE_TOKEN:
@@ -44,6 +44,7 @@ build: off
 
 build_script:
   - ps: $Params =  "/k:`"$env:SONAR_PROJECT`"", "/o:`"$env:SONAR_ORGANIZATION`"", "/v:`"$env:APPVEYOR_BUILD_NUMBER`""
+  - ps: Write-Host $Params
   - ps: $Params += "/d:sonar.host.url=`"https://sonarcloud.io`""
   - ps: if($env:LOCAL_PR -Eq 1) { $Params +=  "/d:sonar.token=`"$env:SONAR_TOKEN`"" }
   - ps: $Params += "/d:sonar.exclusions=`"**/bin/**/*,**/obj/**/*`"", "/d:sonar.coverage.exclusions=`"**/$env:SOLUTION_NAME.Tests/**,**/*Tests.cs`""
