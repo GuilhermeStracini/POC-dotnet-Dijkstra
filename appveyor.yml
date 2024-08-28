@@ -4,12 +4,21 @@ image: Visual Studio 2022
 configuration: Release
 
 environment:
-  SONAR_TOKEN:
-    secure: 1p1JxwJ2ZeEVfXNWsKtV8wOWsHCJopjNMWzQa4wiofHTd9bVpdcEdJnPlUk1bS5X
   CODACY_PROJECT_TOKEN:
     secure: d9gOPuPA6l935Y61F82QoARJir9TvbJXXXV8oftNo7N3XEqHchsk1m8CJlGiE12D
   CODECLIMATE_TOKEN:
     secure: 7ylGPSQmstsISZGZtlexPldNrwl6z9yB1xRlQ0G+S5BnS+L4LXtAqTCkMl2IEkZhXoqwtHd+/9HGh1KJFx7g2biBhbzXs2335xhpo3i6Zos=
+  SONAR_TOKEN:
+    secure: 1p1JxwJ2ZeEVfXNWsKtV8wOWsHCJopjNMWzQa4wiofHTd9bVpdcEdJnPlUk1bS5X
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
 
 init:
   - SET JAVA_HOME=C:\Program Files\Java\jdk19
