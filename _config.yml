@@ -1,5 +1,4 @@
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 title: PoC .NET - Dijkstra
 description: 🔬 Proof of Concept of Dijkstra's algorithm in .NET
-logo: https://raw.githubusercontent.com/GuilhermeStracini/POC-dotnet-Dijkstra/main/logo.jpg
 show_downloads: true
