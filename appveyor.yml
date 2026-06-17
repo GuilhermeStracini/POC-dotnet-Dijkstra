@@ -67,7 +67,7 @@ build_script:
       }
   - if %LOCAL_PR% EQU 1 codecov -f "Tests\%SOLUTION_NAME%.Tests\coverage.net8.0.opencover.xml"
   - if %LOCAL_PR% EQU 1 java -jar ./codacy-test-reporter.jar report -l CSharp -t %CODACY_PROJECT_TOKEN% -r "Tests\%SOLUTION_NAME%.Tests\coverage.net8.0.opencover.xml"
-  - if %LOCAL_PR% EQU 1 dotnet sonarscanner end /d:sonar.token="%SONAR_TOKEN%"
+  #- if %LOCAL_PR% EQU 1 dotnet sonarscanner end /d:sonar.token="%SONAR_TOKEN%"
 
 after_build:
   - xcopy Tests\%SOLUTION_NAME%.Tests\*.xml Coverage\
